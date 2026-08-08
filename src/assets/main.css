@@ -421,6 +421,21 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
+@media (max-width: 480px) {
+    .demo-title{
+        font-size: 1.8rem;
+    }
+
+    .demo-subtitle {
+        font-size: 14px;
+    }
+
+    .crypto-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
 .crypto-button::before {
     content: '';
     position: absolute;
