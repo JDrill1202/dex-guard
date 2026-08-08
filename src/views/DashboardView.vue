@@ -106,6 +106,10 @@ const signOut = async () => {
   router.push({ name: 'admin-login' })
 }
 
+const goToChangePassword = () => {
+  router.push({ name: 'admin-change-password' })
+}
+
 onMounted(loadSubmissions)
 </script>
 
@@ -120,7 +124,10 @@ onMounted(loadSubmissions)
           <br>
           <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-md-row gap-3">
             <h2 class="text-white mb-0">Dashboard</h2>
-            <button @click="signOut" class="btn btn-outline-warning">Sign out</button>
+            <div class="d-flex gap-2">
+              <button @click="goToChangePassword" class="btn btn-outline-light">Change password</button>
+              <button @click="signOut" class="btn btn-outline-warning">Sign out</button>
+            </div>
           </div>
 
           <div class="card shadow-sm auth-card">

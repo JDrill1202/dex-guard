@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import LoginView from '@/views/LoginView.vue';
 import DashboardView from '@/views/DashboardView.vue';
+import ChangePasswordView from '@/views/ChangePasswordView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import SyncWalletsView from '@/views/SyncWalletsView.vue';
 import { requireAuth } from '@/middleware/auth.js';
@@ -32,6 +33,13 @@ const router = createRouter({
             path: '/admin/dashboard',
             name: 'admin-dashboard',
             component: DashboardView,
+            meta: { noLayout: true },
+            beforeEnter: requireAuth
+        },
+        {
+            path: '/admin/change-password',
+            name: 'admin-change-password',
+            component: ChangePasswordView,
             meta: { noLayout: true },
             beforeEnter: requireAuth
         },
