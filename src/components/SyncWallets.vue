@@ -8,7 +8,10 @@
     import Swal from 'sweetalert2'
     import 'sweetalert2/dist/sweetalert2.min.css'
 
-    const walletImageUrls = import.meta.glob('../assets/wallets/**/*.{png,jpg,jpeg,webp}', { eager: true, as: 'url' })
+    const walletImageUrls = Object.fromEntries(
+        Object.entries(import.meta.glob('../assets/wallets/**/*.{png,jpg,jpeg,webp}', { eager: true }))
+            .map(([key, module]) => [key, module?.default || module])
+    )
 
     const getWalletImageUrl = (walletImg) => {
         const normalized = walletImg.replace(/\\/g, '/');
