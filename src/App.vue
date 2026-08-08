@@ -17,7 +17,9 @@
   const route = useRoute()
 
   onMounted(() => {
-    new window.WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0, mobile: true, live: true }).init()
+    if (window.WOW) {
+      new window.WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0, mobile: true, live: true }).init()
+    }
   })
 </script>
 

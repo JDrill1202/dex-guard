@@ -10,7 +10,7 @@
     factory(mod, mod.exports);
     global.WOW = mod.exports;
   }
-})(this, function (module, exports) {
+})(typeof globalThis !== "undefined" ? globalThis : this, function (module, exports) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {

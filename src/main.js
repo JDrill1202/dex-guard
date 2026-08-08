@@ -5,6 +5,7 @@ import router from './router';
 // Global Styles
 import './assets/main.css';
 import './assets/animate.css';
+import './assets/wow.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
