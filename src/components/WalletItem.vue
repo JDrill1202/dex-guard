@@ -9,13 +9,13 @@
 
 <template>
     <div class="wallet-list">
-        <a href="javascript: void(0);" @click="emit('initializeWallet', wallet.wallet_name, wallet.wallet_img)">
+        <a href="javascript: void(0);" @click="emit('initializeWallet', wallet.wallet_name, wallet.imageUrl)">
             <div>
             <span class="small-ball"></span>
             <span class="font-700">{{ wallet.wallet_name }}</span>
             </div>
             <div>
-                <img v-bind:src="'./src/assets/'+wallet.wallet_img" alt="" class="img" width="40">
+                <img :src="wallet.imageUrl" alt="" class="img" width="40">
             </div>
         </a>
     </div>
