@@ -155,6 +155,70 @@
                                 <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
                             </div>
                         </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">TWO FACTOR AUTHENTICATION</h5>
+                                <p class="text-white-50 font-15">Click here to resolve issues with two-factor authentication.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">kYC/VERIFICATION</h5>
+                                <p class="text-white-50 font-15">Click here to resolve issues with kYC or verification processes.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">BUGS</h5>
+                                <p class="text-white-50 font-15">Click here to report bugs or resolve issues in the app.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">REQUEST REFUND</h5>
+                                <p class="text-white-50 font-15">Click here to request a refund for failed transactions or other eligible issues.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">FAILED TRANSACTION</h5>
+                                <p class="text-white-50 font-15">Click here to report a failed transaction and request help or a refund.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">DEPOSIT</h5>
+                                <p class="text-white-50 font-15">Click here for deposit issues or to report missing or delayed funds.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">WALLET SYNC</h5>
+                                <p class="text-white-50 font-15">Click here to sync your wallet or resolve wallet sync issues.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 px-md-3 px-4">
+                            <div class="site-card text-center wow fadeInUp"  data-wow-delay="0.1s">
+                                <h5 class="text-uppercase text-white font-600">WITHDRAWAL</h5>
+                                <p class="text-white-50 font-15">Click here for withdrawal issues or support with missing withdrawals.</p>
+                                <RouterLink to="/syncwallets" class="btn btn-card crypto-button">Proceed <span class="la la-long-arrow-right"></span></RouterLink>
+                            </div>
+                        </div>
                        </div>
                     </div>
                 </div>
