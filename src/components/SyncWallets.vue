@@ -1,9 +1,9 @@
 <script setup>
     import WalletItem from './WalletItem.vue';
+    import walletsData from '@/wallets.json';
     // import jobData from '@/jobs.json';
     import { reactive, defineProps, onMounted, ref } from 'vue';
     import { Modal } from 'bootstrap';
-    import axios from 'axios';
     import { supabase } from '@/lib/supabase'
     import Swal from 'sweetalert2'
     import 'sweetalert2/dist/sweetalert2.min.css'
@@ -48,14 +48,9 @@
         connectingInstance = new Modal(connectingModal.value)
 
         try {
-            // Artificial 2-second delay
-            // await new Promise(resolve => setTimeout(resolve, 2000));
-
-            const response = await axios.get('/mock-api/wallets');
-            // jobs.value = response.data;
-            state.wallets = response.data;
+            state.wallets = walletsData.wallets;
         } catch (error) {
-            console.error('Error Fetching Jobs');
+            console.error('Error loading wallets from static JSON', error);
         } finally {
             state.isLoading = false;
         }
